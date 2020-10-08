@@ -128,7 +128,7 @@ export function VideoWrapper({
         {...rest}
         ref={playerRef}
         muted={muted}
-        controls={controls && (!autoplay || userInteracted)}
+        controls={controls && userInteracted}
         onCanPlay={readyDeferred.resolve}
         onLoadedMetadata={() => {
           if (mediasession) {
